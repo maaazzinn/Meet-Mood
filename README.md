@@ -1,4 +1,4 @@
-# AI-based Behavior Analysis System for Online Meetings
+# Meet-Mood - AI-based Behavior Analysis System for Online Meetings
 
 This project creates an online meeting platform with AI-based participant behavior analysis. The system detects participant engagement through facial expressions, head movements, and screen activity. It helps determine if users are actively engaged, distracted, or absent during a meeting.
 

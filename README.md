@@ -24,8 +24,8 @@ This project creates an online meeting platform with AI-based participant behavi
 
 1. Clone the repository:
    ```
-   git clone https://github.com/yourusername/ai-meeting-engagement-system.git
-   cd ai-meeting-engagement-system
+   git clone https://github.com/maaazzinn/Meet-Mood.git
+   cd Meet-Mood
    ```
 
 2. Install dependencies:

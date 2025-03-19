@@ -1,0 +1,6 @@
+flask==2.2.3
+flask-socketio==5.3.3
+opencv-python==4.7.0.72
+numpy==1.24.2
+deepface==0.0.75
+eventlet==0.33.3

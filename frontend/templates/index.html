@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEET MOOD</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background-color: #4285f4;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 2.2em;
+        }
+        
+        .subtitle {
+            font-size: 1.1em;
+            opacity: 0.9;
+            margin-top: 10px;
+        }
+        
+        .cards {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .card {
+            flex: 1;
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        h2 {
+            margin-top: 0;
+            color: #4285f4;
+            font-size: 1.5em;
+        }
+        
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+        
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+        
+        button {
+            background-color: #4285f4;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 4px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color: #3367d6;
+        }
+        
+        .features {
+            margin-top: 40px;
+        }
+        
+        .feature-list {
+            list-style-type: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 15px;
+        }
+        
+        .feature-item {
+            background-color: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+        
+        .feature-title {
+            font-weight: 600;
+            color: #4285f4;
+            margin-top: 0;
+            margin-bottom: 8px;
+        }
+        
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            color: #666;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>MEET MOOD</h1>
+            <p class="subtitle">Enhance your virtual meetings with real-time engagement analysis</p>
+        </header>
+        
+        <div class="cards">
+            <div class="card">
+                <h2>Create a New Meeting</h2>
+                <form action="/create_meeting" method="POST">
+                    <div class="form-group">
+                        <label for="meeting_name">Meeting Name</label>
+                        <input type="text" id="meeting_name" name="meeting_name" required placeholder="Team Standup">
+                    </div>
+                    <div class="form-group">
+                        <label for="host_name">Your Name</label>
+                        <input type="text" id="host_name" name="host_name" required placeholder="John Doe">
+                    </div>
+                    <button type="submit">Create Meeting</button>
+                </form>
+            </div>
+            
+            <div class="card">
+                <h2>Join Existing Meeting</h2>
+                <form action="/join_meeting" method="POST">
+                    <div class="form-group">
+                        <label for="meeting_id">Meeting ID</label>
+                        <input type="text" id="meeting_id" name="meeting_id" required placeholder="Enter Meeting ID">
+                    </div>
+                    <div class="form-group">
+                        <label for="participant_name">Your Name</label>
+                        <input type="text" id="participant_name" name="participant_name" required placeholder="Jane Doe">
+                    </div>
+                    <button type="submit">Join Meeting</button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="features">
+            <h2>Key Features</h2>
+            <ul class="feature-list">
+                <li class="feature-item">
+                    <h3 class="feature-title">Face Detection</h3>
+                    <p>Identifies if participants are present during the meeting.</p>
+                </li>
+                <li class="feature-item">
+                    <h3 class="feature-title">Eye & Head Movement Tracking</h3>
+                    <p>Monitors attention levels and potential distractions.</p>
+                </li>
+                <li class="feature-item">
+                    <h3 class="feature-title">Facial Expression Analysis</h3>
+                    <p>Detects engagement through emotion recognition.</p>
+                </li>
+                <li class="feature-item">
+                    <h3 class="feature-title">Real-time Engagement Scores</h3>
+                    <p>Calculates and displays participant attentiveness.</p>
+                </li>
+                <li class="feature-item">
+                    <h3 class="feature-title">Live Dashboard</h3>
+                    <p>Shows engagement statistics for all participants.</p>
+                </li>
+                <li class="feature-item">
+                    <h3 class="feature-title">Meeting Reports</h3>
+                    <p>Generates detailed engagement analysis after meetings.</p>
+                </li>
+            </ul>
+        </div>
+        
+        <footer>
+            <p>AI Meeting Engagement System &copy; 2025</p>
+        </footer>
+    </div>
+</body>
+</html>
